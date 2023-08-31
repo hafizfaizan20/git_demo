@@ -17,7 +17,7 @@ Welcome to your Rails application! This application includes user and admin auth
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/hafizfaizan20/git_demo
    cd your-repo-name
 Certainly! Here's a README.md template for your Rails application that covers the features you mentioned:
 
