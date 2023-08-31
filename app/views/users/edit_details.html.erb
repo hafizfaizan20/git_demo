@@ -1,0 +1,32 @@
+ <%= render partial: "shared/user"%>
+<h1>Give Some Additional Details</h1>
+
+<%= form_for @user, url: update_details_user_path(@user), method: :patch do |a| %>
+  <h4>
+    <%= a.label :name %>
+    <%= a.text_field :name %>
+  </h4>
+  <br>
+  <h4>
+    <%= a.label :phone %>
+    <%= a.text_field :phone %>
+  </h4>
+  <br>
+  <h4>  
+    <%= a.label :cnic %>
+    <%= a.text_field :cnic %>
+  </h4>
+  <br>
+  <h4>  
+    <%= a.label :address %>
+    <%= a.text_field :address %>
+  </h4>
+  <br>
+  <h4>
+    <%= a.submit "Submit" %>
+  </h4>
+<% end %>
+
+<%= link_to "Upload Files", upload_pdf_user_path(@user) %><br>
+<%= link_to "Show pdf files", show_pdf_user_path(@user) %><br>
+

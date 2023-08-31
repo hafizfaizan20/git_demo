@@ -1,0 +1,15 @@
+<h1>User Profile</h1>
+  <p><%= @user.name %></p>
+  <p><%= @user.phone %></p>
+  <p><%= @user.address %></p>
+<% if @user.pdfs.attached? %>
+  <h2>Uploaded PDF Files:</h2>
+  <ul>
+    <% @user.pdfs.each do |pdf| %>
+      <li><%= link_to pdf.filename, url_for(pdf) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No PDF files uploaded.</p>
+<% end %>
+

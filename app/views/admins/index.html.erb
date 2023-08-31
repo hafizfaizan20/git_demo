@@ -1,0 +1,36 @@
+<%= render partial: "shared/admin"%>
+<h1>Admin Dashboard</h1>
+<h3>Following users wants Registration on your site</h3>
+<h4>Accept or Reject their Requests</h4>
+<table id="data">
+  <th>
+    <tr>
+      <td><b>ID</b></td>
+      <td><b>Name</b></td>
+      <td><b>Email</b></td>
+      <td><b>Phone</b></td>
+      <td><b>Cnic</b></td>
+      <td><b>Address</b></td>
+      <td><b>Uploaded Files</b></td>
+      <td><b>Accept Request</b></td>
+      <td><b>Reject Request</b></td>
+     </tr>
+  </th>
+  <% @users.each do |user| %>
+  <tr>
+    <td><%= user.id %></td>
+    <td><%= user.name %></td>
+    <td><%= user.email %></td>
+    <td><%= user.phone %></td>
+    <td><%= user.cnic %></td>
+    <td><%= user.address %></td>
+    <td><%= user.pdfs.count %></td>
+    <td><%= button_to "Accept", accept_user_path(user), method: :patch %></td>
+    <td><%= button_to "Reject", reject_user_path(user) ,method: :delete %></td>
+
+
+  </tr>
+  <% end %>
+</table>
+
+<%= link_to "Show all users", show_all_users_admin_path(current_admin) %>

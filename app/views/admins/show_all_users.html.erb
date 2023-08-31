@@ -1,0 +1,38 @@
+<%= render partial: "shared/admin"%>
+<h1>All Users</h1>
+<table id="data">
+  <th>
+    <tr>
+      <td><b>ID</b></td>
+      <td><b>Name</b></td>
+      <td><b>Email</b></td>
+      <td><b>Phone</b></td>
+      <td><b>Cnic</b></td>
+      <td><b>Address</b></td>
+      <td><b>Uploaded Files</b></td>
+      <td><b>User Status</b></td>
+     </tr>
+  </th>
+  <% @users.each do |user| %>
+  <tr>
+    <td><%= user.id %></td>
+    <td><%= user.name %></td>
+    <td><%= user.email %></td>
+    <td><%= user.phone %></td>
+    <td><%= user.cnic %></td>
+    <td><%= user.address %></td>
+    <td><%= user.pdfs.count %></td>
+    <% if user.status %>
+      <td>Registered</td>
+    <% else %>
+      <td>Pending</td>
+    <% end %>  
+    
+    
+
+
+  </tr>
+  <% end %>
+</table>
+<%= link_to 'Back', :back %>
+

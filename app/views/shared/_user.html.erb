@@ -1,0 +1,9 @@
+<div class="link-btns">
+      <% if user_signed_in? %>
+        <p><%= current_user.email %></p>
+        <p><%= user_session %></p>
+        <p><%= button_to "Log Out", destroy_user_session_path, method: :delete %></p>
+        <%= link_to "Edit information", edit_user_registration_path %><br>
+        <%= link_to "Change Password", edit_user_password_path %><br>
+      <% end %>
+  </div>

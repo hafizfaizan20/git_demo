@@ -1,0 +1,7 @@
+<h1>Phone Number Verification</h1>
+
+<%= form_tag verify_code_user_path, method: :post do %>
+  <%= label_tag :code, "Enter the verification code:" %>
+  <%= text_field_tag :code %>
+  <%= submit_tag "Verify" %>
+<% end %>

@@ -1,0 +1,9 @@
+<div class="link-btns">
+  <% if admin_signed_in? %>
+    <p><%= current_admin.email %></p>
+    <p><%= button_to "Log Out", destroy_admin_session_path, method: :delete %></p>
+    <%= link_to "Edit information", edit_admin_registration_path %><br>
+    <%= link_to "Change Password", edit_admin_password_path %><br>
+  <% end %>
+</div>
+
