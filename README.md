@@ -19,31 +19,6 @@ Welcome to your Rails application! This application includes user and admin auth
    ```sh
    git clone https://github.com/hafizfaizan20/git_demo
    cd git_demo
-Certainly! Here's a README.md template for your Rails application that covers the features you mentioned:
-
-markdown
-
-# Rails Application README
-
-Welcome to your Rails application! This application includes user and admin authentication, file uploads, phone number verification, API endpoint, background jobs, and more.
-
-## Features
-
-- User and admin authentication using Devise gem.
-- User phone number verification using Twilio gem.
-- User uploads PDF files and views them.
-- Admin can accept or reject user sign-up requests.
-- API endpoint to create a CSV file of registered users.
-- Background jobs using Sidekiq gem.
-- Sending emails to users with background jobs using Letter Opener gem.
-
-## Setup
-
-1. Clone the repository:
-
-   ```sh
-   git clone https://github.com/hafizfaizan20/git_demo
-   cd git_demo
 
     Install dependencies:
 
