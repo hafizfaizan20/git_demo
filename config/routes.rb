@@ -4,11 +4,10 @@ Rails.application.routes.draw do
   devise_for :admins
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-<<<<<<< HEAD
+
+
   # users routes
-=======
-  # users action routes
->>>>>>> features
+
   authenticated :user do
     root to: "users#edit_details"
   end
