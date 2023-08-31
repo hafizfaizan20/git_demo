@@ -18,7 +18,7 @@ Welcome to your Rails application! This application includes user and admin auth
 
    ```sh
    git clone https://github.com/hafizfaizan20/git_demo
-   cd your-repo-name
+   cd git_demo
 Certainly! Here's a README.md template for your Rails application that covers the features you mentioned:
 
 markdown
