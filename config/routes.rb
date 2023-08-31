@@ -1,13 +1,12 @@
 require 'sidekiq/web'
 Rails.application.routes.draw do
+  # devise routes
   devise_for :admins
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # users routes
   authenticated :user do
     root to: "users#edit_details"
-  end
-  authenticated :admin do
-    root to: "admins#index", as: :authenticated_admin_root
   end
   resources :users, only: [] do
     member do
@@ -20,6 +19,11 @@ Rails.application.routes.draw do
       post :save_pdf
       get :show_pdf
     end
+  end
+
+  #admin routes
+  authenticated :admin do
+    root to: "admins#index", as: :authenticated_admin_root
   end
   resources :admins, only: [:index] do 
     member do 
