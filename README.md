@@ -42,8 +42,8 @@ Welcome to your Rails application! This application includes user and admin auth
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/hafizfaizan20/git_demo
+   cd git_demo
 
     Install dependencies:
 
