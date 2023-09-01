@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       send_verification_sms(@user.phone, verification_code)
       redirect_to verification_page_user_path, notice: "Details updated successfully and verification code has been sent"
     else
-      render 'edit_details'
+      redirect_to edit_details_user_path, alert: "Invalid details"
     end
   end
 
@@ -32,7 +32,7 @@ class UsersController < ApplicationController
     if params[:code] == @user.verification_code
       redirect_to upload_pdf_user_path, notice: "Phone number verified successfully!"
     else
-      render 'verification_page', notice: "Incorrect verification code."
+      redirect_to verification_page_user, alert: "Incorrect verification code."
     end
   end
 

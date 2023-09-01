@@ -12,8 +12,15 @@ class Api::UsersController < ApplicationController
     end
 
     puts csv_data
+    puts current_admin.email
+    admin = current_admin.email
+    directory_path = Rails.root.join('public', admin)
+    
+    unless File.directory?(directory_path)
+      FileUtils.mkdir_p(directory_path)  
+    end
 
-    file_path = Rails.root.join('public', 'users.csv')
+    file_path = directory_path.join('users.csv')
     File.write(file_path, csv_data)
     render json: { csv_url: "/users.csv" }
   end
