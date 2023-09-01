@@ -58,7 +58,7 @@ class UsersController < ApplicationController
 
   def send_verification_sms(phone, code)
     account_sid = "ACe976675e6103ebd810b6c92bf31e2b3d"
-    auth_token = "4b1d495aa4109148bb2550895cd90394"
+    auth_token = "70622fc51f7f1fa6427e44c2593fbacf"
     @client = Twilio::REST::Client.new account_sid, auth_token
     @client.messages.create(
       to: phone,
